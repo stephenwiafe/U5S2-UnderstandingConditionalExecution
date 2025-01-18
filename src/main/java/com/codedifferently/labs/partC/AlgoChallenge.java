@@ -10,8 +10,13 @@ public class AlgoChallenge {
      */
 
     public static Boolean containE(String str) {
-
-        return null;
+        int ct = 0;
+        for (char c : str.toCharArray()) {
+            if (c == 'e') {
+                ct++;
+            }
+        }
+        return ct >= 1 && ct <= 3;
     }
 
      /* Problem 2
@@ -30,9 +35,17 @@ public class AlgoChallenge {
      */
 
     public static String everyOther(String str, int n) {
-
-        return null;
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < str.length(); i += n) {
+            result.append(str.charAt(i));
+        }
+        return result.toString();
     }
 
+    public static void main(String[] args) {
 
+        System.out.println(everyOther("Miracle", 2));
+        System.out.println(everyOther("abcdefg", 2));
+        System.out.println(everyOther("abcdefg", 3));
+    }
 }

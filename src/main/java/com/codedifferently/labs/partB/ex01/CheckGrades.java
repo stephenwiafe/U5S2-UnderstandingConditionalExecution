@@ -7,6 +7,9 @@ public class CheckGrades {
     public static String checkGrades() {
         String response = "";
 
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of students: ");
+
 
         return response;
     }
